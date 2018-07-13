@@ -1,0 +1,19 @@
+# @file		crontab.run
+# @author	Sebastien LEGRAND
+# @date		2010-07-11
+#
+# @brief	Function to disable the removal of crontab
+# @history
+#			2010-07-11 - 1.0.0 - SLE
+#			Initial Version
+function crontab
+{
+    case "$1" in
+        "-r")
+            echo "Deletion of crontab is not authorized!"
+            ;;
+        *)
+            command crontab $*
+            ;;
+    esac
+}

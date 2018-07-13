@@ -1,0 +1,26 @@
+# @file		default.run
+# @author	Sebastien LEGRAND
+# @date		2010-07-10
+#
+# @brief	User default aliases
+# @history
+#			2010-07-10 - 1.0.0 - SLE
+#			Initial Version
+
+# ls
+ls:ls -Fh --color=auto
+ll:ls -l
+la:ls -la
+lrt:ls -lrt
+
+# crontab
+crl:crontab -l
+cre:crontab -e
+crg:crontab -l | grep -v '^#|^$' | grep -i
+crs:crontab -l | grep -v '^#|^$' | sort -n -k 2 -k 1
+
+# rm
+rm:rm -i
+
+# du
+du:du -skh

@@ -1,0 +1,32 @@
+# @file		prompt.run
+# @author	Sebastien LEGRAND
+# @date		2010-07-10
+#
+# @brief	Function to trim the path
+# @history
+#			2010-07-10 - 1.0.0 - SLE
+#			Initial Version
+
+# number max of characters in the path
+PATH_MAX_LENGTH=20
+
+function trimPath
+{
+    local max_length=$PATH_MAX_LENGTH
+    local my_path=$1
+
+    # replace the $HOME with '~' to reduce the size
+    my_path=$(echo "${my_path}" | /bin/sed -e 's!'${HOME}'!~!')
+
+    # compute the remaining size
+    local length=${#my_path}
+
+    # trim the excedent from the left. Keep only the last part
+    if [ $length -gt $max_length ]; then
+        local offset=$(( length - max_length ))
+        my_path=${my_path:$offset:$max_length}
+        printf "..."
+    fi
+
+    printf "%s" ${my_path}
+}

@@ -1,0 +1,25 @@
+# @file		path
+# @author	Sebastien LEGRAND
+# @date		2010-07-10
+#
+# @brief	Define the PATH environment variable
+# @history
+#			2010-07-10 - 1.0.0 - SLE
+#			Initial Version
+
+# look first in the user directory
+.
+${HOME}/bin
+${HOME}/local/bin
+
+# system
+/bin
+
+# /usr
+/usr/bin
+/usr/local/bin
+
+# super user binaries
+/sbin
+/usr/sbin
+/usr/local/sbin

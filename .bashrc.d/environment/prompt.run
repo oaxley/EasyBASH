@@ -1,0 +1,19 @@
+# @file		prompt.run
+# @author	Sebastien LEGRAND
+# @date		2010-07-10
+#
+# @brief	Prompt definition
+# @history
+#			2010-07-10 - 1.0.0 - SLE
+#			Initial Version
+
+# ANSI colors
+NORMAL="\[\e[0m\]"
+
+RED="\[\e[31m\]"
+BLUE="\[\e[38;5;27m\]"
+GREEN="\[\e[32m\]"
+YELLOW="\[\e[33m\]"
+
+# prompt definition
+PS1="[${YELLOW}\t${NORMAL}][\u@\h][${BLUE}\$(trimPath \w)${NORMAL}]\$ "

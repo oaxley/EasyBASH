@@ -1,0 +1,25 @@
+# @file		default.run
+# @author	Sebastien LEGRAND
+# @date		2010-07-10
+#
+# @brief	Default environment file
+# @history
+#			2010-07-10 - 1.0.0 - SLE
+#			Initial Version
+
+# set default editor
+if [ -e /usr/bin/vim ]; then
+    EDITOR=/usr/bin/vim
+    export EDITOR
+fi
+
+# history controls
+HISTCONTROL=ignoreboth
+HISTSIZE=200
+HISTIGNORE="&:[ ]*"
+export HISTCONTROL HISTSIZE HISTIGNORE
+
+# ls colors
+[ -e ${HOME}/.dircolors ] && DIR_COLORS=${HOME}/.dircolors
+[ -e $DIR_COLORS ] || DIR_COLORS=""
+eval "`dircolors -b $DIR_COLORS`"

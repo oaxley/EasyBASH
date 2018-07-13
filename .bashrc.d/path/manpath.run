@@ -1,0 +1,21 @@
+# @file		manpath
+# @author	Sebastien LEGRAND
+# @date		2010-07-10
+#
+# @brief	Define the MANPATH environment variable
+# @history
+#			2010-07-10 - 1.0.0 - SLE
+#			Initial Version
+
+# look first in the user directory
+.
+${HOME}/man
+${HOME}/local/man
+
+# system
+/man
+
+# /usr
+/usr/man
+/usr/share/man
+/usr/local/man

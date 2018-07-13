@@ -1,0 +1,25 @@
+# @file		ld_library_path
+# @author	Sebastien LEGRAND
+# @date		2010-07-10
+#
+# @brief	Define the LD_LIBRARY_PATH environment variable
+# @history
+#			2010-07-10 - 1.0.0 - SLE
+#			Initial Version
+
+# look first in the user directory
+.
+${HOME}/lib
+${HOME}/lib64
+${HOME}/local/lib
+${HOME}/local/lib64
+
+# system
+/lib
+/lib64
+
+# /usr
+/usr/lib
+/usr/lib64
+/usr/local/lib
+/usr/local/lib64

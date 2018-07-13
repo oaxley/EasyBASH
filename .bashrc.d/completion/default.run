@@ -1,0 +1,15 @@
+# @file		default.run
+# @author	Sebastien LEGRAND
+# @date		2010-07-10
+#
+# @brief	Default configuration for auto-completion
+# @history
+#			2010-07-10 - 1.0.0 - SLE
+#			Initial Version
+
+# prevent matching against hidden files
+bind 'set match-hidden-files off'
+
+# autocomplete only directories for these commands
+complete -d cd
+complete -d pushd
