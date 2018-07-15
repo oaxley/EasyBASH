@@ -13,7 +13,7 @@ The directory architecture is as follows:
 - **path** : PATH, LD_LIBRARY_PATH, ...   
 - **extra** : 3rd parties shell scripts  
 
-The loader will try to run the files that matches one of the following rules:
+The loader will try to run the files that matches one of the following rules:  
 1. a file with the hostname (file.*mercury*.run)  
 2. a file with the system (file.*linux*.run)  
 3. if 1 and 2 are unsuccessful, any file (file.run)  
